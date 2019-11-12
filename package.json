@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack-server": "webpack-dev-server --config ./webpack.config.js --inline"
+    "dev-server-webpack": "webpack-dev-server --config ./webpack.config.js --inline",
+    "dev-server-api": "nodemon app.js",
+    "dev": "concurrently \"npm run dev-server-webpack\" \"npm run dev-server-api\""
   },
   "keywords": [],
   "author": "",
@@ -34,5 +36,8 @@
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.9.0",
     "webpack-hot-middleware": "^2.25.0"
+  },
+  "nodemonConfig": {
+    "watch": ["app.js", "server"]
   }
 }
