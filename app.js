@@ -7,7 +7,9 @@ const server = http.createServer(app)
 const PORT = process.env.PORT || 3001
 
 app.get('/api', (req, res) => {
-  res.send('Huhu world')
+  res.json({
+    doc: 'Hello World!!!'
+  })
 })
 
 app.listen(PORT, () => {
