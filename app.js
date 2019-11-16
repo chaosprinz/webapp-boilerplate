@@ -11,7 +11,17 @@ const app = express()
 const server = http.createServer(app)
 const db = new PouchDB(`${config.db.name}`)
 
+const syncConf = config.db.syncDB
+const syncDb = `${syncConf.host}:${syncConf.port}/${syncConf.dbName}`
 const PORT = process.env.PORT || 3001
+
+if (config.db.sync) {
+  db.sync(syncDb, {
+    live: true,
+    retry: true
+  })
+  .on('error', err => console.error('DB-sync-error: ', err))
+}
 
 app.get('/api', (req, res) => {
   res.json({
