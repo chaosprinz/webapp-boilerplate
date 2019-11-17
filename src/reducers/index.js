@@ -1,8 +1,12 @@
 import {combineReducers} from 'redux'
-import defaultReducer from './defaultReducer'
+import userReducer from './user_reducer'
+import messageReducer from './message_reducer'
+import userEditModeReducer from './user_edit_mode_reducer'
 
 const rootReducer = combineReducers({
-  doc: defaultReducer
+  user: userReducer,
+  messages: messageReducer,
+  userEditMode: userEditModeReducer
 })
 
 export default rootReducer

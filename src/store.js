@@ -14,6 +14,7 @@ const initialState = {
     name: 'unknown',
     clientId: ''
   },
+  userEditMode: false,
   messages: []
 }
 
