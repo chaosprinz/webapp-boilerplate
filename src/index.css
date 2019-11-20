@@ -1,0 +1,30 @@
+html {
+  font-size: 1.3em;
+
+}
+
+body {
+  background: black;
+  color: #8F3;
+  font-family: monospace;
+  font-style: normal;
+  padding-left: 4em
+}
+
+input, textarea {
+  background-color: #0D8;
+  color: #604;
+  border-radius: 1em;
+  padding: 0.5em 0.8em 0.5em 1.2em
+}
+input[type="submit"] {
+  background-color: #EFE;
+  padding-right: 2.5em;
+  padding-left: 2.5em;
+  margin-left: 50%;
+  max-width: 12em;
+}
+li {
+  list-style-type: none;
+  margin-left: -0.9em;
+}
