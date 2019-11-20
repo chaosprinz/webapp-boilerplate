@@ -15,7 +15,23 @@ const initialState = {
     clientId: ''
   },
   userEditMode: false,
-  messages: []
+  messages: [
+    {
+      _id: 'd3c73c2b-e28d-431c-8f15-2711a6aba6a5',
+      title: 'Number one',
+      text: 'I am the first of many. We\'ll be legion.',
+      creator: {
+        _id: '0000',
+        name: 'unknown'
+      }
+    }
+  ],
+  editedMessage: {
+    _id: '',
+    title: '',
+    text: '',
+    creator: {}
+  }
 }
 
 const store = createStore(rootReducer, initialState, storeEnhancers)

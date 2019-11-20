@@ -22,6 +22,7 @@ const logIn = (action) => (
   }
 )
 
+
 /**
 # toggleEditHandler
 event-handler for the toggle-editmode-link
@@ -36,10 +37,12 @@ const toggleEditHandler = (action, val) => (
   }
 )
 
+
 /** map state of editmode to props User-Container-Component */
 const mapStateToProps = (state, props) => ({
   editmode: state.userEditMode
 })
+
 
 /**
 map the  toggleEdit- and userLogin-Actions to User-Container-Component,
@@ -51,6 +54,7 @@ const mapActionsToProps = (dispatch, props) => (
     onUserLogin: userLogin
   }, dispatch)
 )
+
 
 /**
 # UserContainer

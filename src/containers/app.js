@@ -5,7 +5,7 @@ import MessageForm from '../components/message_form'
 import AppBody from '../components/app_body'
 import Header from '../components/header'
 import unknownUser from '../actions/user_actions'
-import {UserContext} from '../context'
+import {UserContext, MessageContext} from '../context'
 
 /**
 # App-Container-Component
@@ -16,9 +16,11 @@ using through reacts context-api
 */
 const App = ({user, messages}) => {
   return (
-    <UserContext.Provider value={user}>
-      <AppBody title='MessengerNG'/>
-    </UserContext.Provider>
+    <MessageContext.Provider value={messages}>
+      <UserContext.Provider value={user}>
+        <AppBody title='MessengerNG'/>
+      </UserContext.Provider>
+    </MessageContext.Provider>
   )
 }
 

@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import {updateDoc, reqestDoc} from '../actions/defaultActions'
 import User from '../containers/user'
+import MessageBoard from '../containers/message_board'
 import Header from './header'
 
 const AppBody = ({title}) => {
@@ -11,6 +12,7 @@ const AppBody = ({title}) => {
     <Header title={title}>
       <User />
     </Header>
+    <MessageBoard />
   </div>
 )}
 
