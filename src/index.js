@@ -3,6 +3,8 @@ import ReactDOM from "react-dom"
 import {connect, Provider} from 'react-redux'
 import store from './store'
 
+import 'normalize.css'
+
 import App from "./containers/app"
 
 ReactDOM.render(
